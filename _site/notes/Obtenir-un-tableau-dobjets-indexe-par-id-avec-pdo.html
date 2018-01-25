@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Obtenir un tableau d'objets indexé par id avec PDO</title><link rel="icon" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/touch-icon.png"><link rel="stylesheet" href="//code.cdn.mozilla.net/fonts/fira.css"><link rel="stylesheet" href="/assets/core.css"><link rel="canonical" href="/notes/Obtenir-un-tableau-dobjets-indexe-par-id-avec-pdo"><link rel="alternate" type="application/atom+xml" title="Trucs" href="/feed.xml" /></head><body><aside class="logo"> <a href="/">Trucs</a></aside><main> <noscript><style> article .footnotes { display: block; }</style></noscript><article><div class="center"><h1>Obtenir un tableau d'objets indexé par id avec PDO</h1><time>January 25, 2018</time><ul class="tags"><li> <a href="/tags.html#PHP" title="Pages tagged PHP" rel="tag" class="tag">PHP</a></li><li> <a href="/tags.html#PDO" title="Pages tagged PDO" rel="tag" class="tag">PDO</a></li><li> <a href="/tags.html#SQL" title="Pages tagged SQL" rel="tag" class="tag">SQL</a></li></ul></div><div class="divider"></div><p>La <a href="http://php.net/manual/fr/pdostatement.fetchall.php">méthode <code class="highlighter-rouge">fetchAll</code></a> de PDO dispose de plusieurs options intéressantes pour récupérer un tableau d’objets depuis la base de données :</p><h2 id="pdofetch_unique">PDO::FETCH_UNIQUE</h2><p>Cette option utilise le premier champ de la requète comme clé du tableau retourné.</p><div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sql</span> <span class="o">=</span> <span class="sh">&lt;&lt;&lt;SQL
+	SELECT id, id, name
+	FROM users
+	WHERE id IN (12, 78)
+SQL;
+</span>
+
+<span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="nv">$sth</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$accommodation</span><span class="p">]);</span>
+
+<span class="nv">$users</span> <span class="o">=</span> <span class="nv">$sth</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">\PDO</span><span class="o">::</span><span class="na">FETCH_UNIQUE</span><span class="p">);</span> 
+<span class="cm">/* $users = [
+	12 =&gt; ['id' =&gt; 12, 'name' =&gt; 'Maitre Jojo'],
+	78 =&gt; ['id' =&gt; 78, 'name' =&gt; 'Maitre Pierre'],
+	];
+*/</span>
+</code></pre></div></div><h2 id="pdofetch_class">PDO::FETCH_CLASS</h2><p>Cette option permet d’hydrater un objet de la classe définie :</p><div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">User</span> <span class="p">{}</span>
+
+<span class="nv">$sql</span> <span class="o">=</span> <span class="sh">&lt;&lt;&lt;SQL
+	SELECT id, id, name
+	FROM users
+	WHERE id IN (12, 78)
+SQL;
+</span>
+
+<span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="nv">$sth</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$accommodation</span><span class="p">]);</span>
+
+<span class="nv">$users</span> <span class="o">=</span> <span class="nv">$sth</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">\PDO</span><span class="o">::</span><span class="na">FETCH_CLASS</span><span class="p">,</span> <span class="nx">User</span><span class="o">::</span><span class="na">class</span><span class="p">);</span> 
+<span class="cm">/* $users = [
+	0 =&gt; User('id' =&gt; 12, name =&gt; 'Maitre Jojo'),
+	1 =&gt; User('id' =&gt; 78, 'name' =&gt; 'Maitre Pierre'),
+	];
+*/</span>
+</code></pre></div></div><h2 id="combo">Combo</h2><p>En utilisant un pipe <code class="highlighter-rouge">|</code> il est possible de cummuler les options :</p><div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">User</span> <span class="p">{}</span>
+
+<span class="nv">$sql</span> <span class="o">=</span> <span class="sh">&lt;&lt;&lt;SQL
+	SELECT id, id, name
+	FROM users
+	WHERE id IN (12, 78)
+SQL;
+</span>
+
+<span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="nv">$sth</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$accommodation</span><span class="p">]);</span>
+
+<span class="nv">$users</span> <span class="o">=</span> <span class="nv">$sth</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">\PDO</span><span class="o">::</span><span class="na">FETCH_UNIQUE</span><span class="o">|</span><span class="nx">\PDO</span><span class="o">::</span><span class="na">FETCH_CLASS</span><span class="p">,</span> <span class="nx">User</span><span class="o">::</span><span class="na">class</span><span class="p">);</span> 
+<span class="cm">/* $users = [
+	12 =&gt; User('id' =&gt; 12, name =&gt; 'Maitre Jojo'),
+	78 =&gt; User('id' =&gt; 78, 'name' =&gt; 'Maitre Pierre'),
+	];
+*/</span>
+</code></pre></div></div><h2 id="pdofetch_key_pair">PDO::FETCH_KEY_PAIR</h2><p>Petite appartée, <code class="highlighter-rouge">PDO::FETCH_KEY_PAIR</code> permet de retourner un tableau de clé =&gt; valeur. La requête ne doit selectionner que 2 champs.</p></article><div class="back"> <a href="/">Back</a></div></main></body></html>
