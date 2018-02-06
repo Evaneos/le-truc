@@ -1,5 +1,5 @@
 ---
-title: Aller plus loin avec beberlei/assert
+title: Gérer les cas null et les collections avec beberlei/assert
 summary: "La librairie beberlei/assert permet de combiner les assertions, de vérifier que plusiers éléments répondent à la même contrainte
 ou de s'assurer que s'ils ne répondent pas à la contrainte ils sont null."
 tags:
