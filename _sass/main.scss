@@ -126,7 +126,8 @@ span[data-note] {
     box-sizing: border-box;
     &:hover,
     &:focus {
-      background: #f14e32;
+      background: #14716a;
+      color: #FFF;
     }
     &:hover + .logo-prompt,
     &:focus + .logo-prompt {
