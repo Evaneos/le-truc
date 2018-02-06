@@ -6,7 +6,7 @@ tags:
     - CLI
     - Unix
 ---
-Faire un `docker system prune` de temps à autre permet de libérer de l'espace disque. Afin de connaitre l'espace potentiellement gangable, `docker system df` permet de connaitre l'utilisation de l'espace disque.
+Faire un `docker system prune` de temps à autre permet de libérer de l'espace disque. Afin de connaitre l'espace potentiellement gagnable, `docker system df` permet de connaitre l'utilisation de l'espace disque.
 
 ```
 TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE
