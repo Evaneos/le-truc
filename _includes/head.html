@@ -37,12 +37,12 @@
 
 {% if page.image %}
 <meta name="twitter:card"  content="summary_large_image" />
-<meta name="twitter:image" content="{{ site.baseurl }}{{ page.image }}" />
-<meta property="og:image" content="{{ site.baseurl }}{{ page.image }}" />
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}" />
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}" />
 {% elsif site.title_image  %}
 <meta name="twitter:card"  content="summary" />
-<meta name="twitter:image" content="{{ site.title_image }}" />
-<meta property="og:image" content="{{ site.title_image }}" />
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ site.title_image }}" />
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ site.title_image }}" />
 {% endif %}
 
 
