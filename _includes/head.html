@@ -15,3 +15,38 @@
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/core.css">
 <link rel="canonical" href="{{ page.url | prepend: site.baseurl }}">
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml" />
+
+
+<meta property="og:type" content="website" />
+
+<meta property="og:url" content="{{ site.url }}" />
+<meta name="twitter:url" value="{{ site.url }}" />
+
+<meta name="twitter:title" content="{{ page.title }}">
+<meta property="og:title" content="{{ page.title }}" />
+<meta name="twitter:site" content="@{{ site.twitter_username }}">
+
+
+{% if page.summary %}
+<meta name="twitter:description" content="{{ page.summary }}" />
+<meta property="og:description" content="{{ page.summary }}" />
+{% else %}
+<meta name="twitter:description" content="{{ site.description }}" />
+<meta property="og:description" content="{{ site.description }}" />
+{% endif %}
+
+{% if page.image %}
+<meta name="twitter:card"  content="summary_large_image" />
+<meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />
+<meta property="og:image" content="{{ site.url }}{{ page.image }}" />
+{% elsif site.title_image  %}
+<meta name="twitter:card"  content="summary" />
+<meta name="twitter:image" content="{{ site.title_image }}" />
+<meta property="og:image" content="{{ site.title_image }}" />
+{% endif %}
+
+
+{% if page.tags %}
+<meta name="twitter:label1" value="Tags" />
+<meta name="twitter:data1" value="{% for tag in page.tags %}{{ tag }} {% endfor %}" />
+{% endif %}

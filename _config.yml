@@ -1,10 +1,12 @@
 # Site Info
 title:              "Trucs"
+description: Trucs et astuces de l'équipe technique d'Evaneos
 
 # Site Settings
-baseurl:            "http://blog.chorip.am/trucs" # Base URL must end WITHOUT a slash, default: ""
+baseurl:            "/trucs" # Base URL must end WITHOUT a slash, default: ""
 permalink:          /notes/:title # Post permalink
 timezone:           Europe/Paris # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+twitter_username: evaneos_tech
 
 # Site Build
 highlighter:        rouge
