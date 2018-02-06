@@ -7,7 +7,7 @@ tags:
     - Symfony
 ---
 
-Symfony ajoute des polyfill pour des histoires compatibilités, sans que ça ne soit forcément utile. Si vous êtes en 7.2 vous pouvez éviter de charger les polyfills vous pouvez ajouter la section "replace" dans composer :
+Symfony ajoute des polyfill pour des histoires de compatibilité, sans que ça ne soit forcément utile. Si vous êtes en 7.2 vous pouvez éviter de charger les polyfills vous pouvez ajouter la section "replace" dans composer :
 
 ```
     "replace": {
