@@ -1,9 +1,9 @@
 # Site Info
-title:              "Trucs"
+title:              "Le truc"
 description: Trucs et astuces de l'équipe technique d'Evaneos
 
 # Site Settings
-baseurl:            "/trucs" # Base URL must end WITHOUT a slash, default: ""
+baseurl:            "/le-truc" # Base URL must end WITHOUT a slash, default: ""
 permalink:          /notes/:title # Post permalink
 timezone:           Europe/Paris # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 twitter_username: evaneos_tech
