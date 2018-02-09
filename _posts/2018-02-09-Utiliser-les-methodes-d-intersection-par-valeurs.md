@@ -40,7 +40,7 @@ array_uintersect($tableau1, $tableau2, function ($objet1, $objet2) { return $obj
 Ce qui est faux, cette fonction ne marche pas de cette manière.
 Si on lit plus attentivement la documentation : `La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second. Notez qu'avant PHP 7.0.0, cet entier devait être dans l'intervalle -2147483648 à 2147483647`. 
 On pourrait penser qu'il suffit de comparer l'égualité des deux objets, retourner 0 quand ils sont égaux et autres choses quand ils ne le sont pas :
-```
+```PHP
 $tableau1 = [new  Objet('un'), new Objet('deux'), new Objet('trois'), new Objet('quatre')                   ];
 $tableau2 = [new  Objet('un'), new Objet('deux'),                     new Objet('quatre'), new Objet('cinq')];
 
