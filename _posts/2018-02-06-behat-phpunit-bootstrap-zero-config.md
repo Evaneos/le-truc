@@ -22,4 +22,4 @@ Composer à la rescousse, il nous permet d'autoloader directement le fichier en 
   }
 ```
 
-`compose dump-autoload` permettra d'inclure directement le fichier `bootstrap.php` avant de lancer les tests. Désormais il n'est plus nécessaire de configurer les outils de tests chacun de leur côté.
+`compose dump-autoload` permettra d'inclure directement le fichier `bootstrap.php` avant de lancer les tests. Désormais il n'est plus nécessaire de configurer les outils de tests indépendamment.
