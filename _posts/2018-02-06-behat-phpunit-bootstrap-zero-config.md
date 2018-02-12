@@ -1,15 +1,15 @@
 ---
-title: Utiliser le même fichier bootstrap pour behat & phpunit avec 0 config sur les outils
-summary: "Bootstrap de test sans configuration"
+title: Utiliser un fichier de configuration commun pour Behat et PhpUnit
+summary: "Il est possible de regrouper la configuration pour plusieurs outils de test en utilisant un fichier de bootstrap commun."
 tags:
     - PHP
     - Behat
     - PHPUnit
 ---
 
-Lorsque vous utilisez Behat & PHPUnit dans un même projet, vous vous retrouvez à charger le bootstrap.php qui initialise votre environement dans chacun des outils. C'est fastidieux et on finit par regarder la doc sur internet sur interet, bref une perte de temps.
+Lorsque l'on utilise Behat & PHPUnit dans un même projet, il peut être nécessaire de charger un même fichier `bootstrap.php` qui initialise l'environnement pour chacun des outils.
 
-Voici comment le faire sans se prendre le choux, et en plus c'est centralisé. Composer à la rescousse.
+Composer à la rescousse, il nous permet d'autoloader directement le fichier en environnement de développement :
 
 ```
   "autoload-dev": {
@@ -22,4 +22,4 @@ Voici comment le faire sans se prendre le choux, et en plus c'est centralisé. C
   }
 ```
 
-`composer dump-autoload` composer includera automatiquement le fichier avant de lancer les tests. Aucune config n'est requise sur nos outils de test.
+`compose dump-autoload` permettra d'inclure directement le fichier `bootstrap.php` avant de lancer les tests. Désormais il n'est plus nécessaire de configurer les outils de tests indépendamment.
