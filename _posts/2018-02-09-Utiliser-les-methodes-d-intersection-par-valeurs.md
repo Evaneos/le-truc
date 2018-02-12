@@ -1,10 +1,8 @@
 ---
 title: Utiliser les méthodes d'intersection par valeurs
-summary: "PDO permet de récupérer des objets hydratés depuis et de sélectionner la clef servant à l'indexation du tableau de résultat."
+summary: "La méthode `array_intersect` permet de récupérer l'intersection entre n tableaux. Nous allons ici voir l'utilisation avec des tableaux d'objets."
 tags:
     - PHP
-    - PDO
-    - SQL
 ---
 
 La méthode `array_intersect` permet de calculer l'intersection de deux tableaux (ou plus), contenant des valeurs scalaires.
