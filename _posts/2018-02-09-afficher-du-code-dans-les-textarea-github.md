@@ -29,7 +29,7 @@ ou bien sur plusieurs:
 {:.center}
 ![Inline]({{ "/assets/2018-02-09-afficher-du-code-dans-les-textarea-github/multiligne.png" | absolute_url }})
 
-Github nous permet de type-hinter le langage afin de profiter de la coloration syntaxique:
+Github nous permet d'indiquer de quel langage il s'agit afin de profiter de la coloration syntaxique:
 
     ```javascript
     var prenom = 'quentin';
