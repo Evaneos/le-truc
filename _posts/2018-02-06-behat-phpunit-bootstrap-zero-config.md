@@ -1,7 +1,7 @@
 ---
 title: Utiliser un fichier de configuration commun pour Behat et PhpUnit
 summary: "Il est possible de regrouper la configuration pour plusieurs outils de test en utilisant un fichier de bootstrap commun."
-image: covers/2018-02-06-behat-phpunit-bootstrap-zero-config.png
+image: /covers/2018-02-06-behat-phpunit-bootstrap-zero-config.png
 tags:
     - PHP
     - Behat
