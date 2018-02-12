@@ -15,7 +15,9 @@ Symfony ajoute des polyfill pour des histoires de compatibilité, sans que ça n
       "symfony/polyfill-php71": "*",
       "symfony/polyfill-php72": "*",
       "symfony/polyfill-php70": "*",
-      "symfony/polyfill-php56": "*"
+      "symfony/polyfill-php56": "*",
+      "symfony/polyfill-mbstring": "*",
+      "symfony/polyfill-intl-icu": "*"
    }
 ```
 
