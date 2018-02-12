@@ -39,6 +39,11 @@ layout: null
     <content type="html" xml:lang="en">
       <![CDATA[{{ content }}]]>
     </content>
+    {% if post.summary %}
+    <summary>
+      {{ post.summary | xml_escape }}
+    </summary>
+    {% endif %}
   </entry>
 
   {% endfor %}
