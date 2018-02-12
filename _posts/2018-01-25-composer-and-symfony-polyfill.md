@@ -1,13 +1,13 @@
 ---
-title: Eviter de charger les polyfill inutiles grâce à composer
-summary: "Supprimer les polyfill inutiles"
+title: Eviter de charger les polyfills inutiles grâce à composer
+summary: "Supprimer les polyfills PHP inutiles inclus par Symfony."
 tags:
     - PHP
     - Composer
     - Symfony
 ---
 
-Symfony ajoute des polyfill pour des histoires de compatibilité, sans que ça ne soit forcément utile. Si vous êtes en 7.2 vous pouvez éviter de charger les polyfills vous pouvez ajouter la section "replace" dans composer :
+Symfony ajoute des polyfills pour des histoires de compatibilité, sans que ça ne soit forcément utile. Si vous êtes en 7.2 vous pouvez éviter de charger les polyfills en ajoutant à la section "replace" de composer :
 
 ```
     "replace": {
@@ -21,4 +21,4 @@ Symfony ajoute des polyfill pour des histoires de compatibilité, sans que ça n
    }
 ```
 
-Enfin il suffit de jouer la commande `composer update` afin de les supprimer. A vous d'ajuster les polyfill à supprimer en fonction de votre version.
+Enfin il suffit de jouer la commande `composer update` afin de les supprimer. À vous d'ajuster les polyfills à supprimer en fonction de votre version de PHP.
