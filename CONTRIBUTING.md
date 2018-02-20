@@ -62,3 +62,23 @@ The article in `_posts/2018-02-13-ouvrir-une-issue-github-depuis-le-code.md` wil
 │   │   └── contextual-menu.png
 │   ├── ...
 ```
+
+### Preview your article locally
+
+Copy/paste (and maybe adapt) the following:
+
+```shell
+# Install brew (optional) 🔄
+/usr/bin/ruby -e "$(curl -fsSL \
+    https://raw.githubusercontent.com/Homebrew/install/master/install \
+)"
+
+# Install ruby (bundler depends on a specific path 😞)
+brew install ruby
+
+# Install jekyll ⚙
+gem install jekyll
+
+# Run jekyll 🙌
+jekyll serve
+```
