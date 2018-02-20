@@ -16,16 +16,7 @@ Voyons ensemble comment paramétrer ce petit utilitaire.
 
 L'installation se fait simplement sous macOs :
 
-```zsh
-# Brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Dépendance de la lib
-brew install node
-
-# La librairie en elle-même
-npm install -g pretty-diff
-```
+{:.center} ![Inline]({{ "/assets/2018-02-20-git-diff-github-style/git-pretty-diff_installation.png" | absolute_url }})
 
 Quant au paramétrage, je vous donne mon avis, probablement biaisé, à prendre ou à laisser donc.
 
@@ -35,22 +26,14 @@ Pour nuancer mon avis, je vous partage mon expérience : je suis en télétravai
 
 Ma solution est un alias git et quelques alias shell, tout ce qu'il y a de plus classique :
 
-```zsh
-git config --global alias.pretty-diff pretty-diff
-
-alias gd="git pretty-diff"
-alias gds="git pretty-diff --staged"
-```
+{:.center} ![Inline]({{ "/assets/2018-02-20-git-diff-github-style/git-pretty-diff_configuration.png" | absolute_url }})
 
 ## Utilisation
 
 Le comportement de `pretty-diff` est très similaire à celui du `diff` standard :
 
-```zsh
-git pretty-diff --staged # Ne comparer que les fichier du stage avec HEAD
-git pretty-diff HEAD~1 # Comparer les fichier du working directory avec HEAD - 1
-git pretty-diff --staged ${COMMIT_SHA} # Comparer les fichier du stage avec le commit spécifié
-```
+{:.center} ![Inline]({{ "/assets/2018-02-20-git-diff-github-style/git-pretty-diff_usages.png" | absolute_url }})
 
 Le tout dans une UI très sympathique :
 
+{:.center} ![Inline]({{ "/assets/2018-02-20-git-diff-github-style/git-pretty-diff_sneak_peek.png" | absolute_url }})
