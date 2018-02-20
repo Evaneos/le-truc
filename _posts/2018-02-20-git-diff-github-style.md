@@ -51,8 +51,8 @@ alias gds="git pretty-diff --staged"
 
 Le comportement de `pretty-diff` est très similaire à celui du `diff` standard :
 
-{:.center} ![Inline]({{ "/assets/2018-02-20-git-diff-github-style/git-pretty-diff_usages.png" | absolute_url }})
+![Inline]({{ "/assets/2018-02-20-git-diff-github-style/git-pretty-diff_usages.png" | absolute_url }})
 
 Le tout dans une UI très sympathique :
 
-{:.center} ![Inline]({{ "/assets/2018-02-20-git-diff-github-style/git-pretty-diff_sneak_peek.png" | absolute_url }})
+![Inline]({{ "/assets/2018-02-20-git-diff-github-style/git-pretty-diff_sneak_peek.png" | absolute_url }})
