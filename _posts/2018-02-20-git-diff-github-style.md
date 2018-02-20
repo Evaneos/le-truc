@@ -1,9 +1,10 @@
 ---
 title: Vos git diff via une UI à la Github.
 summary: "Votre workflow git intègre sûrement une utilisation importante de git diff. Voyons comment intégrer une belle UI de diff à la Github"
+image: /assets/2018-02-20-git-diff-github-style/cover/git-pretty-diff_sneak_peek.png
 tags:
-    - git
-    - utilitaire
+    - Git
+    - Utilitaire
 ---
 
 Que ce soit pour faire la review d'une PR ou vérifier les **Files changed** de vos propres PRs, vous avez probablement eu affaire aux diff de Github. Imaginez maintenant que vos `git diff` en local renvoient vers une UI HTML aussi plaisante que celle de Github, intéressant n'est-ce pas ?
