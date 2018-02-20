@@ -5,7 +5,7 @@ tags:
     - PHP
     - Composer
     - Symfony
-image: /covers/2018-01-25-composer-and-symfony-polyfill.png
+image: /assets/2018-01-25-composer-and-symfony-polyfill/cover/replace-pollyfills-code-snippet.png
 ---
 
 Symfony ajoute des polyfills pour des histoires de compatibilité, sans que ça ne soit forcément utile. Si vous êtes en 7.2 vous pouvez éviter de charger les polyfills en ajoutant à la section "replace" de composer :
