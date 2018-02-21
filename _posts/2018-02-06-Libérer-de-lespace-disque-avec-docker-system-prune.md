@@ -5,7 +5,7 @@ tags:
     - Docker
     - CLI
     - Unix
-image: /covers/2018-02-06-docker-system-df.png
+image: /assets/2018-02-06-docker-system-df/cover/docker-df-cli-output.png
 ---
 Faire un `docker system prune` de temps à autre permet de libérer de l'espace disque. Afin de connaitre l'espace potentiellement gagnable, `docker system df` permet de connaitre l'utilisation de l'espace disque.
 
