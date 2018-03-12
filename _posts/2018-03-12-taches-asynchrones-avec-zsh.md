@@ -11,7 +11,7 @@ Soyons honnête, on passe tous pas mal de temps et d'itérations à rendre nos s
 
 L'inconvéniant c'est qu'à force de les enrichir, le prompt deviens de plus en plus lent et un shell peut vite prendre plusieurs secondes à démarrer.
 
-Pour ma part, avec l'utilisation de `docker-machine`, je dois à chaque démarrage de mon shell éxecuter la commande `eval $(docker-machine env)` afin de rendre disponible les variable nécessaires à `docker`. C'est long, c'est lourd et c'est synchrone !
+Pour ma part, avec l'utilisation de `docker-machine`, je dois à chaque démarrage de mon shell exécuter la commande `eval $(docker-machine env)` afin de rendre disponible les variable nécessaires à `docker`. C'est long, c'est lourd et c'est synchrone !
 
 ## Pré-requis
 
@@ -25,10 +25,10 @@ On installe tout ça et go.
 - créer le worker
 - attacher un callback
 - lancer le nouveau job
-- le callback s'éxecute
+- le callback s'exécute
 - bien penser à faire le ménage si l'on ne réutilise pas le worker
 
-La petite subtilité, c'est que la tâche éxectuté dans un job appartiendra à un autre contexte et ne pourra donc pas faire d'`export` dans le shell courant (entre autre).
+La petite subtilité, c'est que la tâche exéctuté dans un job appartiendra à un autre contexte et ne pourra donc pas faire d'`export` dans le shell courant (entre autre).
 
 ```zsh
 # on initialise aync
@@ -50,8 +50,23 @@ docker_machine_callback() {
 # on attache notre callback au worker
 async_register_callback docker_machine_init docker_machine_callback
 
-# enfin on lance la tâche que l'on souhaite éxecuter
+# enfin on lance la tâche que l'on souhaite exécuter
 async_job docker_machine_init docker-machine env
 ```
 
+## Benchmark
 
+En faisant un petit comparatif sur cette seule tâche, on gagne en moyenne **680ms** (étant sur macOS j'ai utilisé un script perl qui lui même prend un peu de temps).
+
+```zsh
+time_now() {
+    perl -MTime::HiRes -e 'printf("%.0f\n",Time::HiRes::time()*1000)'
+}
+
+start=$(time_now)
+# did some stuff
+end=$(time_now)
+echo runtime=$((end-start))
+```
+
+Lorsque j'utilise `zsh-async`, l'initialisation du job prend en moyenne **20ms**. Alors que l'exécution de la tâche `docker-machine env` elle même prend pratiquement **700ms**.
