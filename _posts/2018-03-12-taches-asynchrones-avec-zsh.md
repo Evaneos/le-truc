@@ -7,11 +7,11 @@ tags:
     - Unix
 ---
 
-Soyons honnête, on passe tous pas mal de temps et d'itérations à rendre nos shells plus efficaces et agréables. Nos workflows y sont très présents et c'est l'un des premiers truc que l'on pense à backup.
+Soyons honnêtes, on passe tous pas mal de temps et d'itérations à rendre nos shells plus efficaces et agréables. Nos workflows y sont très présents et c'est l'un des premiers truc que l'on pense à backup.
 
 L'inconvénient c'est qu'à force de l'enrichir, le prompt deviens de plus en plus lent et un shell peut vite prendre plusieurs secondes à démarrer.
 
-Pour ma part, avec l'utilisation de `docker-machine`, je dois à chaque démarrage de mon shell, exécuter la commande `eval $(docker-machine env)` afin de rendre disponible les variables nécessaires à `docker`. C'est long, c'est lourd et c'est synchrone !
+Pour ma part, avec l'utilisation de `docker-machine`, je dois, à chaque démarrage de mon shell, exécuter la commande `eval $(docker-machine env)` afin de rendre disponible les variables nécessaires à `docker`. C'est long, c'est lourd et c'est synchrone !
 
 ## Pré-requis
 
@@ -21,14 +21,14 @@ On installe tout ça et go.
 
 ## Mise en place
 
-`zsh-async` utilise un principe de worker, de callback et de jobs. Étape par étape ça donne :
+`zsh-async` utilise un principe de workers, de callbacks et de jobs. Étape par étape ça donne :
 - créer le worker
 - attacher un callback
 - lancer le nouveau job
 - le callback s'exécute
 - bien penser à faire le ménage si l'on ne réutilise pas le worker
 
-La petite subtilité, c'est que la tâche exéctuté dans un job appartiendra à un autre contexte et ne pourra donc pas faire d'`export` dans le shell courant (entre autre).
+La petite subtilité, c'est que la tâche exéctutée dans un job appartiendra à un autre contexte et ne pourra donc pas faire d'`export` dans le shell courant (entre autre).
 
 ```zsh
 # on initialise aync
