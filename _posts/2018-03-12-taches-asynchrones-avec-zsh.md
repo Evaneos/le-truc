@@ -44,7 +44,7 @@ docker_machine_callback() {
     # $3 correspond à l'output sur stdout
     eval $3
     # on détruit le worker
-    async_stop_worker docker_machine_init
+    async_stop_worker docker_machine_init # 😇
 }
 
 # on attache notre callback au worker
