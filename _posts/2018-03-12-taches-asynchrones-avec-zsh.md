@@ -11,7 +11,7 @@ Soyons honnête, on passe tous pas mal de temps et d'itérations à rendre nos s
 
 L'inconvéniant c'est qu'à force de les enrichir, le prompt deviens de plus en plus lent et un shell peut vite prendre plusieurs secondes à démarrer.
 
-Pour ma part, avec l'utilisation de `docker-machine`, je dois à chaque démarrage de mon shell éxecuter la commande `eval $(docker-machine env)` afin de rendre disponible les variable nécessaires à `docker`. C'est long, c'est lourd et c'est synchrone!
+Pour ma part, avec l'utilisation de `docker-machine`, je dois à chaque démarrage de mon shell éxecuter la commande `eval $(docker-machine env)` afin de rendre disponible les variable nécessaires à `docker`. C'est long, c'est lourd et c'est synchrone !
 
 ## Pré-requis
 
@@ -21,7 +21,7 @@ On installe tout ça et go.
 
 ## Mise en place
 
-`zsh-async` utilise un principe de worker, de callback et de jobs. Étape par étape ça donne:
+`zsh-async` utilise un principe de worker, de callback et de jobs. Étape par étape ça donne :
 - créer le worker
 - attacher un callback
 - lancer le nouveau job
@@ -32,9 +32,9 @@ La petite subtilité, c'est que la tâche éxectuté dans un job appartiendra à
 
 ```zsh
 # on initialise aync
-# (inutile si vous avez utilisé antigen installer la lib)
+# (inutile si vous avez utilisé antigen pour installer la lib)
 source ./async.zsh
-aync_init
+async_init
 
 # on créer un nouveau worker 
 async_start_worker docker_machine_init
