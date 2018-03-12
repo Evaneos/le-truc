@@ -7,11 +7,11 @@ tags:
     - Unix
 ---
 
-Soyons honnête, on passe tous pas mal de temps et d'itérations à rendre nos shell plus efficaces et agréables. Nos workflow y sont très présents et c'est l'un des premiers truc que l'on pense à backup, nos précieux dot files.
+Soyons honnête, on passe tous pas mal de temps et d'itérations à rendre nos shells plus efficaces et agréables. Nos workflows y sont très présents et c'est l'un des premiers truc que l'on pense à backup.
 
-L'inconvéniant c'est qu'à force de les enrichir, le prompt deviens de plus en plus lent et un shell peut vite prendre plusieurs secondes à démarrer.
+L'inconvénient c'est qu'à force de l'enrichir, le prompt deviens de plus en plus lent et un shell peut vite prendre plusieurs secondes à démarrer.
 
-Pour ma part, avec l'utilisation de `docker-machine`, je dois à chaque démarrage de mon shell exécuter la commande `eval $(docker-machine env)` afin de rendre disponible les variable nécessaires à `docker`. C'est long, c'est lourd et c'est synchrone !
+Pour ma part, avec l'utilisation de `docker-machine`, je dois à chaque démarrage de mon shell, exécuter la commande `eval $(docker-machine env)` afin de rendre disponible les variables nécessaires à `docker`. C'est long, c'est lourd et c'est synchrone !
 
 ## Pré-requis
 
