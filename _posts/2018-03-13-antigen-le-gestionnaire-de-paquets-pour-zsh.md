@@ -1,16 +1,19 @@
 ---
 title: Antigen, le gestionnaire de paquets pour zsh
-summary: "Antigen est un ensemble de fonctions qui permettent de gérer facilement les modules de votre shell zsh. Le concept est pratiqement le même que les bundles vim+pathogen."
+summary: "Antigen est un ensemble de fonctions qui permettent de gérer facilement les modules de votre shell zsh. Le concept est pratiquement le même que les bundles vim+pathogen."
 image:
 tags:
     - Zsh
     - Unix
+    - antigen
+    - dotfiles
 ---
 
-[Antigen](http://github.com/zsh-users/antigen) est un ensemble de fonctions qui permettent de gérer facilement les modules de votre shell zsh. Le concept est pratiqement le même que les bundles `vim+pathogen`.
+[Antigen](http://github.com/zsh-users/antigen) est un ensemble de fonctions qui permettent de gérer facilement les modules de votre shell zsh. Le concept est équivalent aux bundles `vim+pathogen`.
 
 En quelques mots : c'est un outil efficace pour étendre les capacités de votre shell, tout en conservant une config lisible et maintenable.
 
+`~/.zshrc`
 ```zsh
 # Init antigen
 source /usr/local/share/antigen/antigen.zsh
@@ -29,19 +32,19 @@ antigen apply
 
 ## Installation
 
+### avec Homebrew
 ```zsh
-# Homebrew
 brew install antigen
 echo "source /usr/local/share/antigen/antigen.zsh" >> $HOME/.zshrc
 ```
 
+### avec cURL
 ```zsh
-# cURL
 curl -L git.io/antigen > $HOME/.antigen/antigen.zsh
 echo "source $HOME/.antigen/antigen.zsh" >> $HOME/.zshrc
 ```
 
-La liste des approches pour installer antigen est disponible sur le [wiki du repo](https://github.com/zsh-users/antigen/wiki/Installation).
+La liste des approches pour installer antigen est disponible dans le [wiki du repo](https://github.com/zsh-users/antigen/wiki/Installation).
 
 ## Mise en place
 
@@ -54,6 +57,7 @@ Son mode de fonctionnement est assez simple. Lorsque vous utilisez la commande `
 
 ### Depuis un repo Github
 
+`~/.zshrc`
 ```zsh
 # Bundles from repo
 antigen bundle zsh-users/zsh-autosuggestions
@@ -75,7 +79,7 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle brew
 
-# Tell antigen i'm done
+# Tell antigen I'm done
 antigen apply
 ```
 
