@@ -6,11 +6,9 @@ tags:
     - Git
 ---
 
-La commande `git log` permet de voir les logs des commits. Il est possible de ne s'intéresser qu'au changement pour une méthode particulière 
-d'une classe grâce à l'option `-L`, `git log -L :<methodName>:<file>`.
+La commande `git log` permet de voir les logs des commits. Il est possible de ne s'intéresser qu'au changement pour une méthode particulière d'une classe grâce à l'option `-L`, `git log -L :<methodName>:<file>`.
 
-Par exemple `git log -L :listItineraries:/src/controllers/ItineraryController.php` indiquera toutes les modifications de la méthode
-`ItineraryController::listItineraries`.
+Par exemple `git log -L :listItineraries:/src/controllers/ItineraryController.php` indiquera toutes les modifications de la méthode `ItineraryController::listItineraries`.
 
 Pour que cela fonctionne il faut indiquet à Git comment traiter les fichiers `.php` en ajoutant à la racine du projet un 
 fichier `.gitattributes` contenant :
@@ -19,4 +17,4 @@ fichier `.gitattributes` contenant :
 *.php diff=php
 ```
 
-Il est également possible d'indiquer une plage de lignes sous la forme `git log -L <start>,<end>:<file>`, ou même uen regex `git log -L :<regex>:<file>`.
+Il est également possible d'indiquer une plage de lignes sous la forme `git log -L <start>,<end>:<file>`, ou même une regex avec `git log -L :<regex>:<file>`.
