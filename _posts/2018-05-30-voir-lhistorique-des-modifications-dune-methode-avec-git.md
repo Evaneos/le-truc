@@ -10,7 +10,7 @@ La commande `git log` permet de voir les logs des commits. Il est possible de ne
 
 Par exemple `git log -L :listItineraries:/src/controllers/ItineraryController.php` indiquera toutes les modifications de la méthode `ItineraryController::listItineraries`.
 
-Pour que cela fonctionne il faut indiquet à Git comment traiter les fichiers `.php` en ajoutant à la racine du projet un 
+Pour que cela fonctionne il faut indiquer à Git comment traiter les fichiers `.php` en ajoutant à la racine du projet un 
 fichier `.gitattributes` contenant :
 
 ```
