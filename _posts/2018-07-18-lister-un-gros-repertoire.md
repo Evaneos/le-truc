@@ -91,6 +91,6 @@ Enfin, vu que l'on parle de millions d'entrées, plutôt que d'_output_ sur `STD
 
 Victoire ! Non seulement ça fonctionne mais en plus c'est "**presque** sans douleur". La **limitation avec cette approche** c'est les I/O qui prennent très très cher. Si vous avez un process genre NGinx à côté, pensez à bien le monitorer.
 
-## Le petit plus
+## Le conseil du sage
 
 Moyen mnémotechnique pour s’en souvenir : `-f1`, parce que ça trace 🏎 !  
