@@ -12,7 +12,7 @@ Le coup classique. On commence à stocker quelques fichiers dans une dossier sur
 
 Lorsque vous faites un `ls` dans un répertoire le process lancé va commencer par établir une liste de tout les fichiers présent dans le répertoire. Puis essaiera de les sortir sur `STDOUT` ordonnés par ordre alphabétique. Là, on sent le truc venir. Bien que ça ne pose aucun problème en règle générale, avant même de commencer à _output_ le résultat, `ls` va charger en mémoire l'intégralité des chemins des fichiers qu'il essai de lister.
 
-La suite, est évidemment, une occupation en RAM délirante et un CPU qui prend le tarif de sa vie (un excellent moyen de crasher une machine).
+La suite, est évidemment, une occupation en RAM délirante et un CPU qui prend le tarif de sa vie (un excellent moyen de crasher une machine) et le ~~mieux~~ pire la dedans, c'est que vous ne verrez pas apparaître, ne serai-ce que, la première ligne du résultat.
 
 ## Find? a new sherif in town?
 
@@ -55,7 +55,7 @@ Le `-1` c'est bonus, on affiche simplement le nom du fichier sur une ligne compl
 2018-07-18-lister-un-gros-repertoire.md
 ```
 
-On l'a vu plus haut, l'inconvéniant de `ls` est qu'il charge en mémoire avant de faire des opérations de tri. Grâce au _flag_ `-f` on s'affranchit de cette contrainte et `ls` retournera les _matchs_ au fur et à mesure sur `STDOUT`
+On l'a vu plus haut, l'inconvéniant de `ls` est qu'il charge en mémoire avant de faire des opérations de tri. Grâce au _flag_ `-f` on s'affranchit de cette contrainte et `ls` retournera les résultats au fur et à mesure sur `STDOUT`
 
 ```bash
 ❯ ls -1f
