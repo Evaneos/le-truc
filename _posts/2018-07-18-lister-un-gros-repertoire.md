@@ -86,7 +86,7 @@ Et pourquoi s'arrêter là ! Une autre astuce, est d'invoquer le binaire directe
 Enfin, vu que l'on parle de millions d'entrées, plutôt que d'_output_ sur `STDOUT` on va gentillement envoyer tout ça dans un fichier texte.
 
 ```bash
-❯ \/bin/ls -f1 1> ./mon-fichier.txt
+❯ \/bin/ls -f1 > ./mon-fichier.txt
 ```
 
 Victoire ! Non seulement ça fonctionne mais en plus c'est "**presque** sans douleur". La **limitation avec cette approche** c'est les I/O qui prennent très très cher. Si vous avez un process genre NGinx à côté, pensez à bien le monitorer.
