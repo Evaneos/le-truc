@@ -1,6 +1,7 @@
 ---
 title: Voir l'historique des modifications d'une méthode avec Git
 summary: "Il est possible de voir l'historique des modification d'une méthode au sein d'un fichier avec Git avec la command git log"
+author: Charles Desneuf
 image:
 tags:
     - Git

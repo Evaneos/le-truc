@@ -1,6 +1,7 @@
 ---
 title: Ouvrir une issue depuis le code sur Github.
 summary: "Ouvrir une issue Github qui concerne une partie du code est monnaie courante. Nous allons voir comment la plateforme nous facilite la tâche."
+author: Quentin Pautrat
 tags:
     - Github
 ---

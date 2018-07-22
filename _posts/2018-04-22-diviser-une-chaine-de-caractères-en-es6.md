@@ -1,6 +1,7 @@
 ---
 title: Diviser une chaîne de caractères en ES6
 summary: "Grâce à la décomposition apportée par la version ES2015 de javascript, il est facile de diviser une chaîne de caractères"
+author: Lucas Personnaz
 image:
 tags:
     - javascript

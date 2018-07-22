@@ -1,6 +1,7 @@
 ---
 title: Travailler avec une version non publiée d'une librairie avec composer
 summary: "Comment faire pour travailler avec une librairie PHP dans une version non publiée."
+author: Charles Desneuf
 tags:
     - PHP
     - Composer

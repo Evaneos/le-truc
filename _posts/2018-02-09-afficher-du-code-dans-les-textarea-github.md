@@ -2,6 +2,7 @@
 title: Afficher du code proprement dans vos commentaires et descriptions sur Github
 summary: "La syntaxe Markdown nous permet d'afficher du code dans notre texte.
 Ce n'est pas toujours suffisant. Github intègre une surcouche afin de nous faciliter la vie."
+author: Quentin Pautrat
 tags:
     - Github
 ---

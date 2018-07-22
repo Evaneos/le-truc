@@ -1,6 +1,7 @@
 ---
 title: Antigen, le gestionnaire de paquets pour zsh
 summary: "Antigen est un ensemble de fonctions qui permettent de gérer facilement les modules de votre shell zsh. Le concept est pratiquement le même que les bundles vim+pathogen."
+author: Antoine Lépée
 image:
 tags:
     - Zsh
