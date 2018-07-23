@@ -1,6 +1,7 @@
 ---
 title: Lister un répertoire de plusieurs millions de fichiers efficacement
 summary: "On le sait… ce n'est pas une bonne idée de mettre des millions de fichier dans le même répertoire. Tout devient plus compliqué, ne serait-ce que lister son contenu !"
+author: Antoine Lépée
 image: /le-truc/assets/2018-07-18-lister-un-gros-repertoire/cover/stars.jpg
 tags:
     - Unix

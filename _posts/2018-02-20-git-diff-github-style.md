@@ -1,6 +1,7 @@
 ---
 title: Vos git diff via une UI à la Github.
 summary: "Votre workflow git intègre sûrement une utilisation importante de git diff. Voyons comment intégrer une belle UI de diff à la Github"
+author: Fabien Huitelec
 image: /assets/2018-02-20-git-diff-github-style/cover/git-pretty-diff_sneak_peek.png
 tags:
     - Git

@@ -1,6 +1,7 @@
 ---
 title: Eviter de charger les polyfills inutiles grâce à composer
 summary: "Supprimer les polyfills PHP inutiles inclus par Symfony."
+author: Johann Saunier
 tags:
     - PHP
     - Composer

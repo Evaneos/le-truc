@@ -1,6 +1,7 @@
 ---
 title: Utiliser les méthodes d'intersection par valeurs
 summary: "La méthode `array_intersect` permet de récupérer l'intersection entre n tableaux. Nous allons ici voir l'utilisation avec des tableaux d'objets."
+author: Pol-Valentin Cami
 tags:
     - PHP
 ---

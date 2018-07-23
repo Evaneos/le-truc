@@ -1,6 +1,7 @@
 ---
 title: Dynamiser le shell avec les tâches asynchrones
 summary: "L'initialisation d'un shell peut vite devenir longue à force d'y ajouter divers tâches. Voici comment rendre asynchrone une partie de ces tâches"
+author: Antoine Lépée
 image:
 tags:
     - Zsh
