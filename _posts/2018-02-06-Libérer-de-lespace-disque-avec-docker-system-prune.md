@@ -1,6 +1,7 @@
 ---
 title: Libérer de l'espace disque avec docker system prune
 summary: "La commande docker system prune permet de retirer images et containers inutilisés"
+author: Lucas Personnaz
 tags:
     - Docker
     - CLI

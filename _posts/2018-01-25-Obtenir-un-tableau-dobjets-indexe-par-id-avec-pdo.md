@@ -1,6 +1,7 @@
 ---
 title: Obtenir un tableau d'objets indexé par id avec PDO
 summary: "PDO permet de récupérer des objets hydratés depuis et de sélectionner la clef servant à l'indexation du tableau de résultat."
+author: Charles Desneuf
 tags:
     - PHP
     - PDO
