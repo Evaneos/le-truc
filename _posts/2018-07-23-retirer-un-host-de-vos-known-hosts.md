@@ -1,6 +1,7 @@
 ---
 title: Retirer un host de vos ~/.ssh/known_hosts
 summary: "Quand on joue avec plusieurs instances qui pointe vers un même nom de domaine, SSH se montre, en général, réticent vis-à-vis de notre ~/.ssh/known_hosts. Ce petit tip permet de gérer ça avec une simple commande."
+author: Fabien Huitelec
 image: /le-truc/assets/2018-07-23-retirer-un-host-de-vos-known-hosts/cover/tunnel.jpg
 tags:
     - Unix
