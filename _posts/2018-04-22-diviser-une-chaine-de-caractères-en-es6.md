@@ -25,3 +25,11 @@ const cake = 'cake';
 const slicedCake = [...cake];
 // ['c', 'a', 'k', 'e' ]
 ```
+
+Ou encore via la méthode statique [`Array.from`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+
+```javascript
+const cake = 'cake';
+
+const slicedCake = Array.from(cake);
+// ['c', 'a', 'k', 'e']
