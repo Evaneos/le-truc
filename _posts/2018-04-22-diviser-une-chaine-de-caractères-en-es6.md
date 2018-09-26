@@ -33,3 +33,4 @@ const cake = 'cake';
 
 const slicedCake = Array.from(cake);
 // ['c', 'a', 'k', 'e']
+```
