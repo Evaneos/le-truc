@@ -1,6 +1,6 @@
 ---
 title: Afficher les erreurs de PDO
-summary: "Il est possible que PHP PDO indique lorsqu'il rencontre une erreur"
+summary: "PHP PDO peut indiquer lorsqu'il rencontre une erreur !"
 author: Charles Desneuf
 image:
 tags:
@@ -8,7 +8,7 @@ tags:
     - PDO
 ---
 
-Par défaut [PHP PDO](https://secure.php.net/manual/en/book.pdo.php), qui abstrait la communication avec différents systèmes de stockage de données, se content de retourner `false` lorsqu'il rencontre une erreur.
+Par défaut [PHP PDO](https://secure.php.net/manual/en/book.pdo.php), qui abstrait la communication avec différents systèmes de stockage de données, se contente de retourner `false` lorsqu'il rencontre une erreur.
 
 Cela peut, par exemple, poser des problèmes avec des requêtes invalides que l'on pense avoir été jouées correctement.
 
