@@ -23,7 +23,7 @@ SQL;
 
 
 $sth = $pdo->prepare($sql);
-$sth->execute([$accommodation]);
+$sth->execute([]);
 
 $users = $sth->fetchAll(\PDO::FETCH_UNIQUE); 
 /* $users = [
@@ -48,7 +48,7 @@ SQL;
 
 
 $sth = $pdo->prepare($sql);
-$sth->execute([$accommodation]);
+$sth->execute([]);
 
 $users = $sth->fetchAll(\PDO::FETCH_CLASS, User::class); 
 /* $users = [
@@ -74,7 +74,7 @@ SQL;
 
 
 $sth = $pdo->prepare($sql);
-$sth->execute([$accommodation]);
+$sth->execute([]);
 
 $users = $sth->fetchAll(\PDO::FETCH_UNIQUE|\PDO::FETCH_CLASS, User::class); 
 /* $users = [
